@@ -21,7 +21,7 @@ let storageBaseDadosSqlite = multer.diskStorage({
         } catch(err) {
             console.error(err)
         }        
-        cb(null, nomeArquivoSqlite)
+        cb(null, `${nomeArquivoSqlite}`)
     }
   })
    
