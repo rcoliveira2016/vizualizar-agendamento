@@ -13,6 +13,8 @@ let storageBaseDadosSqlite = multer.diskStorage({
     },
     filename: function (req, file, cb) {
         try {
+            console.log(caminho);
+            console.log(__dirname);
             if (fs.existsSync(caminho)) {
                 fs.unlinkSync(caminho)
             }

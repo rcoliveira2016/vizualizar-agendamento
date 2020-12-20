@@ -12,6 +12,8 @@ const dbDefult = {
 module.exports = {
     db: dbDefult,
     abrir: async function(){
+        console.log(`${pastaArquivoSqlite}/${nomeArquivoSqlite}`);
+        console.log(__dirname);
         this.db = await sqlite.open({ filename: `${pastaArquivoSqlite}/${nomeArquivoSqlite}`, driver: sqlite3.Database });
     },
     fechar: async function(){
